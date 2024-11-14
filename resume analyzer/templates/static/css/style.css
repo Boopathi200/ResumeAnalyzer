@@ -1,0 +1,115 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #333;
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+form input[type="file"] {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    border: 2px dashed #2575fc;
+    border-radius: 5px;
+    background-color: #f3f4f6;
+    color: #333;
+    cursor: pointer;
+}
+
+form button {
+    background: #6a11cb;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #2575fc;
+}
+
+/* Result Section Styles */
+#results {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+h2 {
+    color: #6a11cb;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+p strong {
+    color: #2575fc;
+}
+
+/* Feedback List */
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+ul li {
+    margin: 5px 0;
+    color: #444;
+}
+
+/* Additional Styling */
+@media (max-width: 600px) {
+    form, #results {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}

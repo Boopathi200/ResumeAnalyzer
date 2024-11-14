@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analysis Result</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Analysis Results</h1>
+        <p><strong>Grammar Score:</strong> {{ grammar_score }}%</p>
+        <p><strong>Alignment Score:</strong> {{ alignment_score }}%</p>
+        <p><strong>Presentation Score:</strong> {{ presentation_score }}%</p>
+        <p><strong>Overall Score:</strong> {{ overall_score }}%</p>
+
+        <h3>Grammar Feedback</h3>
+        <ul>
+            {% for feedback in grammar_feedback %}
+                <li>{{ feedback }}</li>
+            {% endfor %}
+        </ul>
+
+        <a href="/">Upload Another Resume</a>
+    </div>
+</body>
+</html>

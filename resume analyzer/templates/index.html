@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analyzer</title>
+    <head>
+        <link rel="stylesheet" href="static\css\style.css">
+    </head>
+    
+</head>
+<body>
+    <h1>Upload Your Resume</h1>
+    <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Analyze Resume</button>
+    </form>
+
+    {% if grammar_score is defined %}
+        <h2>Analysis Results</h2>
+        <p id ="Gram "><strong>Grammar Score:</strong> {{ grammar_score }}%</p>
+        <p id="Align"><strong>Alignment Score:</strong> {{ alignment_score }}%</p>
+        <p id="Pres"><strong>Presentation Score:</strong> {{ presentation_score }}%</p>
+        <p id="Over"><strong>Overall Score:</strong> {{ overall_score }}%</p>
+        
+        <h3>Grammar Feedback:</h3>
+        <ul>
+            {% for feedback in grammar_feedback %}
+                <li>{{ feedback }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
